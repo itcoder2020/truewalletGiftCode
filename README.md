@@ -1,4 +1,4 @@
-# TrueWallet Gift PHP CLASS
+# TrueWallet GiftCode
 
 ## Installation
 
