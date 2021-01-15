@@ -51,7 +51,7 @@ class trueWallet
             $header = [
                 "content-type:application/json"
             ];
-            $data = '{"mobile":"0969590967","voucher_hash":"' . $code . '"}';
+            $data = '{"mobile":"'.$this->phone.'","voucher_hash":"' . $code . '"}';
             $res = $this->Curl("POST", 'https://gift.truemoney.com/campaign/vouchers/' . $code . '/redeem', $header, $data, null);
             $json = json_decode($res, true);
             if ($json['status']['message'] != 'success') return $this->formatJson(400, "error", $json['status']['message'], null);
